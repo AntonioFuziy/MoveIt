@@ -1,78 +1,65 @@
-# Example app with styled-components
+# Move It
 
-This example features how you use a different styling solution than [styled-jsx](https://github.com/zeit/styled-jsx) that also supports universal styles. That means we can serve the required styles for the first render within the HTML and then load the rest in the client. In this case we are using [styled-components](https://github.com/styled-components/styled-components).
+This repository is based on a [Rocketseat](https://rocketseat.com.br/) project course Next Level Week 4 (NLW #4) and I adapted it to my own version, if you want to see my Github profile you can access this button bellow:
 
-For this purpose we are extending the `<Document />` and injecting the server side rendered styles into the `<head>`, and also adding the `babel-plugin-styled-components` (which is required for server side rendering). Additionally we set up a global [theme](https://www.styled-components.com/docs/advanced#theming) for styled-components using NextJS custom [`<App>`](https://nextjs.org/docs/advanced-features/custom-app) component.
+[![AntonioFuziy](https://vercel.com/button)](https://github.com/AntonioFuziy)
 
-## Deploy your own
+The idea of the project is basically a app that uses a countdown clock to suggest some challenges for people who are using the computer or phone and when the clock gets to zero the user can pause the activity to relax a little and complete the challenges that are suggested, when these challenges are completed, you can earn some XP and get you level up as long as you complete more challenges.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+## Test the app
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-styled-components&project-name=with-styled-components&repository-name=with-styled-components)
+If you want to take a look at my version of the app, here is the link for MoveIt:
+<!-- [MoveIt](https://moveit-antoniofuziy.vercel.app/) -->
+[![MoveIt](https://vercel.com/button)](https://moveit-antoniofuziy.vercel.app/)
+## How to customize for you version
 
-## How to use
+If you want to change my version of the app and get your own one, you can use the instructions below:
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+You only need to have **NodeJS**, **npm** and **Git** installed, so that you can execute the commands.
+
+Here is a tutorial to install **NodeJS** and **npm**:
+
+[Install NodeJS and npm Tutorial](https://www.techgalery.com/2019/12/how-to-install-nodejs-and-npm-on.html)
+
+And here a tutorial to install **Git**:
+
+[Install Git Tutorial](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+If you have all set up, you need to run the commands below:
 
 ```bash
-npx create-next-app --example with-styled-components with-styled-components-app
-# or
-yarn create next-app --example with-styled-components with-styled-components-app
+#Clone the Github repository
+git clone https://github.com/AntonioFuziy/MoveIt
+
+#Enter the MoveIt project folder
+cd MoveIt/
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+In the MoveIt project folder you need to get the node_modules pack using the command below:
 
-### Try it on CodeSandbox
+```bash
+#Installing the node_modules folder
+npm install
 
-[Open this example on CodeSandbox](https://codesandbox.io/s/github/vercel/next.js/tree/canary/examples/with-styled-components)
+#if you have yarn
 
-### Notes
-
-When wrapping a [Link](https://nextjs.org/docs/api-reference/next/link) from `next/link` within a styled-component, the [as](https://styled-components.com/docs/api#as-polymorphic-prop) prop provided by `styled` will collide with the Link's `as` prop and cause styled-components to throw an `Invalid tag` error. To avoid this, you can either use the recommended [forwardedAs](https://styled-components.com/docs/api#forwardedas-prop) prop from styled-components or use a different named prop to pass to a `styled` Link.
-
-<details>
-<summary>Click to expand workaround example</summary>
-<br />
-
-**components/StyledLink.js**
-
-```javascript
-import Link from 'next/link'
-import styled from 'styled-components'
-
-const StyledLink = ({ as, children, className, href }) => (
-  <Link href={href} as={as} passHref>
-    <a className={className}>{children}</a>
-  </Link>
-)
-
-export default styled(StyledLink)`
-  color: #0075e0;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    color: #40a9ff;
-  }
-
-  &:focus {
-    color: #40a9ff;
-    outline: none;
-    border: 0;
-  }
-`
+yarn
 ```
 
-**pages/index.js**
+Then you need to run the command:
 
-```javascript
-import StyledLink from '../components/StyledLink'
+```bash
+#Installing the node_modules folder
+npm run dev
 
-export default () => (
-  <StyledLink href="/post/[pid]" forwardedAs="/post/abc">
-    First post
-  </StyledLink>
-)
+#if you have yarn
+
+yarn dev
 ```
 
-</details>
+To open the application you can click the button below:
+
+[![Open My App](https://vercel.com/button)](http://localhost:3000)
+
+Or you can open the project in you browser, to do this you just need to open your browser **(Firefox, Google Chrome, Internet Explorer and etc)** 
+and type http://localhost:3000.
