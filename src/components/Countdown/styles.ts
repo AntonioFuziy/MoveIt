@@ -10,7 +10,7 @@ export const Clock = styled.div`
   align-items: center;
   font-weight: 600;
   font-family: "Arial", sans-serif;
-  color: var(--title);
+  color: var(--text);
 
   > div{
     flex: 1;
@@ -19,7 +19,7 @@ export const Clock = styled.div`
     align-items: center;
     justify-content: space-evenly;
 
-    background: var(--white);
+    background: var(--background-box);
     box-shadow: 0 0 60px rgba(0,0,0,0.05);
     border-radius: 5px;
     font-size: 8.5rem;
@@ -56,7 +56,7 @@ export const StartButton = styled.button`
   }
   :disabled{
     background: var(--white);
-    color: var(--text);
+    color: var(--background);
     cursor: not-allowed;
   }
 `
@@ -75,13 +75,13 @@ export const StopButton = styled.button`
   transition: background 0.3s;
   border: 0;
   border-radius: 5px;
-  color: var(--title);
+  color: var(--background);
   font-size: 1.3rem;
   font-weight: 600;
 
   :not([disabled]):hover{
     background: var(--red);
-    color: var(--white);
+    color: var(--text);
   }
 `
 

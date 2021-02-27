@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   margin-top: 3.5rem;
-  border-bottom: 2px solid #D7D8DA;
+  border-bottom: 2px solid var(--background-box);
   border-radius: 4px;
   font-weight: 500;
 

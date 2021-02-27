@@ -13,7 +13,7 @@ export const Progress = styled.div`
   flex: 1;
   height: 4px;
   border-radius: 4px;
-  background: var(--gray-line);
+  background: var(--background-box);
   margin: 0 1.5rem;
   position: relative;
 `;

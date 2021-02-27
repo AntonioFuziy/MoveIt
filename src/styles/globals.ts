@@ -31,10 +31,11 @@ export const GlobalStyle = createGlobalStyle`
   :root{
     --red: #E83F58;
     --white: #fff;
-    --background: #f2f3f5;
+    --background: #212121;
+    --background-box: #121212;
     --gray-line: #dcdde0;
-    --text: #665;
-    --title: #2e384d;
+    --text: #dbdbdb;
+    --title: #f7f7f7;
     --green: #4cd62b;
     --blue: #5965e0;
     --blue-dark: #4953b8;
