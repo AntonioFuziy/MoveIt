@@ -42,7 +42,6 @@ In the MoveIt project folder you need to get the node_modules pack using the com
 npm install
 
 #if you have yarn
-
 yarn
 ```
 
@@ -53,7 +52,6 @@ Then you need to run the command:
 npm run dev
 
 #if you have yarn
-
 yarn dev
 ```
 
