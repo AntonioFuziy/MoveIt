@@ -2,7 +2,7 @@
 
 This repository is based on a [Rocketseat](https://rocketseat.com.br/) project course Next Level Week 4 (NLW #4) and I adapted it to my own version, if you want to see my Github profile you can access this button bellow:
 
-[![AntonioFuziy](https://vercel.com/button)](https://github.com/AntonioFuziy)
+[AntonioFuziy](https://github.com/AntonioFuziy)
 
 The idea of the project is basically a app that uses a countdown clock to suggest some challenges for people who are using the computer or phone and when the clock gets to zero the user can pause the activity to relax a little and complete the challenges that are suggested, when these challenges are completed, you can earn some XP and get you level up as long as you complete more challenges.
 
@@ -10,7 +10,7 @@ The idea of the project is basically a app that uses a countdown clock to sugges
 
 If you want to take a look at my version of the app, here is the link for MoveIt:
 <!-- [MoveIt](https://moveit-antoniofuziy.vercel.app/) -->
-[![MoveIt](https://vercel.com/button)](https://moveit-antoniofuziy.vercel.app/)
+[MoveIt](https://moveit-antoniofuziy.vercel.app/)
 ## How to customize for you version
 
 If you want to change my version of the app and get your own one, you can use the instructions below:
@@ -59,7 +59,7 @@ yarn dev
 
 To open the application you can click the button below:
 
-[![Open My App](https://vercel.com/button)](http://localhost:3000)
+[Open My App](http://localhost:3000)
 
 Or you can open the project in you browser, to do this you just need to open your browser **(Firefox, Google Chrome, Internet Explorer and etc)** 
 and type http://localhost:3000.
