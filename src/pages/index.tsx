@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 
+import {GetServerSideProps} from 'next';
+
 import ExperienceBar from '../components/ExperienceBar';
 import Profile from '../components/Profile';
 import CompletedChallenges from '../components/CompletedChallenges';
 import Countdown from '../components/Countdown';
 import ChallengeBox from '../components/ChallengeBox';
 import { CountdownProvider } from '../contexts/CountdownContext';
+import { ChallengesProvider } from '../contexts/ChallengesContext';
 
 export const Container = styled.div`
   height: 100vh;
@@ -28,22 +31,42 @@ export const Section = styled.div`
 
 export const ProfileSection = styled.div``;
 
-export default function Home() {
-  return (
-    <Container>
-      <ExperienceBar/>
+interface HomeProps{
+  level: number;
+  currentExperience: number;
+  challengesCompleted: number;
+}
 
-      <CountdownProvider>
-        <Section>
-          <ProfileSection>
-            <Profile/>
-            <CompletedChallenges/>
-            <Countdown/>
-          </ProfileSection>
-          
-          <ChallengeBox/>
-        </Section>
-      </CountdownProvider>
-    </Container>
+export default function Home(props: HomeProps) {
+  return (
+    <ChallengesProvider level={props.level} currentExperience={props.currentExperience} challengesCompleted={props.challengesCompleted}>
+      <Container>
+        <ExperienceBar/>
+
+        <CountdownProvider>
+          <Section>
+            <ProfileSection>
+              <Profile/>
+              <CompletedChallenges/>
+              <Countdown/>
+            </ProfileSection>
+            
+            <ChallengeBox/>
+          </Section>
+        </CountdownProvider>
+      </Container>
+    </ChallengesProvider>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
+  
+  return {
+    props: {
+      level: Number(level),
+      currentExperience: Number(currentExperience),
+      challengesCompleted: Number(challengesCompleted)
+    }
+  }
 }
